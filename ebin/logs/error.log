@@ -1,6 +1,0 @@
-
-=INFO REPORT==== 9-Mar-2010::15:54:39 ===
-    alarm_handler: {set,{{connection_lost,eldap,"10.0.1.12",389},[]}}
-
-=INFO REPORT==== 9-Mar-2010::15:54:39 ===
-    alarm_handler: {clear,{connection_lost,eldap,"10.0.1.12",389}}
