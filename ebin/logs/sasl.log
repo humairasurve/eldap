@@ -1,0 +1,82 @@
+
+=PROGRESS REPORT==== 9-Mar-2010::15:54:34 ===
+          supervisor: {local,sasl_safe_sup}
+             started: [{pid,<0.42.0>},
+                       {name,alarm_handler},
+                       {mfa,{alarm_handler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 9-Mar-2010::15:54:34 ===
+          supervisor: {local,sasl_safe_sup}
+             started: [{pid,<0.43.0>},
+                       {name,overload},
+                       {mfa,{overload,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 9-Mar-2010::15:54:34 ===
+          supervisor: {local,sasl_sup}
+             started: [{pid,<0.41.0>},
+                       {name,sasl_safe_sup},
+                       {mfa,
+                           {supervisor,start_link,
+                               [{local,sasl_safe_sup},sasl,safe]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 9-Mar-2010::15:54:34 ===
+          supervisor: {local,sasl_sup}
+             started: [{pid,<0.44.0>},
+                       {name,release_handler},
+                       {mfa,{release_handler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 9-Mar-2010::15:54:34 ===
+         application: sasl
+          started_at: 'eldap@humaira-laptop'
+
+=PROGRESS REPORT==== 9-Mar-2010::15:54:39 ===
+          supervisor: {local,eldap_sup}
+             started: [{pid,<0.54.0>},
+                       {name,web_proxy_ldap},
+                       {mfa,
+                           {eldap_fsm,start_link,
+                               [web_proxy_ldap,
+                                {[{"10.0.1.12",389}],
+                                 "cn=Directory Manager","11223344",
+                                 #Fun<eldap_sup.2.29731760>}]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 9-Mar-2010::15:54:39 ===
+         application: eldap
+          started_at: 'eldap@humaira-laptop'
+
+=PROGRESS REPORT==== 9-Mar-2010::15:54:39 ===
+          supervisor: {local,inet_gethost_native_sup}
+             started: [{pid,<0.57.0>},{mfa,{inet_gethost_native,init,[[]]}}]
+
+=PROGRESS REPORT==== 9-Mar-2010::15:54:39 ===
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.56.0>},
+                       {name,inet_gethost_native_sup},
+                       {mfa,{inet_gethost_native,start_link,[]}},
+                       {restart_type,temporary},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 9-Mar-2010::15:54:43 ===
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.62.0>},
+                       {name,timer_server},
+                       {mfa,{timer,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]

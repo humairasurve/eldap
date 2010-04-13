@@ -1,0 +1,4 @@
+{web_proxy_ldap, [{addr, {"10.0.1.63", 359}},
+		  {rootdn, "cn=Directory Manager"},
+		  {passwd, "11223344"}
+		  ]}.
